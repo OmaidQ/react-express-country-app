@@ -3,17 +3,21 @@ const app = express()
 const request = require('request');
 const https = require('https')
 
-app.get("/api", (req,res) => {
-    res.json({"users" : ["userOne", "userTwo", "userThree", "usergour"]})
-    // console.log("hi")
+app.use(express.json());
 
-    request('https://restcountries.com/v3.1/name/ireland', { json: true }, (err, res, body) => {
+app.post("/api", (req,res) => {
+    const country = req.body.country;
+    console.log(`Received request for country: ${country}`);
+    const url = `https://restcountries.com/v3.1/name/${country}`;
+    request(url, { json: true }, (err, result, body) => {
         if (err) { return console.log(err); }
-        
-        body = body[0]
-        console.log(body)
-        console.log(body.population);
+        data = body[0]
+        res.json(data)
     });
+})
+app.use(function (err, req, res, next) {
+    console.error(err.stack)
+    res.status(500).send('Something broke!')
 })
 
 app.listen(5000, () => console.log("Server started on port 5000"))
