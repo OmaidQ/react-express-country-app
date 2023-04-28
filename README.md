@@ -33,4 +33,6 @@ http://localhost:3000/
 ```
 Enter any country's name and appropriate and relevant information from the API will be displayed
 
+<img width="720" alt="Screenshot 2023-04-28 at 22 26 17" src="https://user-images.githubusercontent.com/99283521/235256852-ae854c77-a2b8-4270-965c-1cede049fcab.png">
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
