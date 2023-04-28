@@ -47,27 +47,28 @@ return (
        <img src={backendData.coatOfArms?.png || 'NULL'} alt="Coat of Arms" style={{ width: '300px' , height: 'auto', border: '2px solid black' }} />
        </div>
       </div>
-      <p style={{ fontWeight: 'bold', textAlign : 'right', marginTop : '-350px', padding: '5px' }}>Coat of Arms</p>
-        <div style={{ padding: '20px', marginLeft: '520px', marginTop: '0px', fontWeight : 'bold', fontSize : '17px'  }}>
-        <p> Name: {backendData.name?.common || 'NULL'}</p> 
-        <p> Official name: {backendData.name?.official || 'NULL'}</p>
-        <p> Capital: {backendData.capital || 'NULL'}</p>
-        <p> Region: {backendData.region || 'NULL'}</p>
-        <p> Subregion: {backendData.subregion || 'NULL'}</p>
-        <p> Continents: {Object.values(backendData.continents).join(', ') || 'NULL'}</p>
-        <p> Languages: {Object.values(backendData.languages).join(', ') || 'NULL'}</p>
-        <p> Area: {backendData.area || 'NULL'}m</p>
-        <p> Population: {backendData.population || 'NULL'}</p>
-        <p> Latitude and Longitude: ({backendData.latlng?.[0] || 'NULL'}, {backendData.latlng?.[1] || 'NULL'})</p>
-        <p> Borders: {backendData.borders?.join(' , ') || 'NULL'}</p>
-        <p> Timezones: {Object.values(backendData.timezones).join(', ') || 'NULL'}</p>
-        <p> Currencies: {Object.keys(backendData.currencies).join(', ') || 'NULL'}</p>
-        <p> Alternate Spellings: {backendData.altSpellings?.join(' , ') || 'NULL'}</p>
-        <p> tld: {backendData.tld || 'NULL'}</p>
-        <p> Status: {backendData.status || 'NULL'}</p>
-        <p> Independent? {backendData.independent ? 'Yes' : 'No' || 'NULL'}</p>
-        <p> Landlocked? {backendData.landlocked ? 'Yes' : 'No' || 'NULL'}</p>
-        <p> UN Member? {backendData.unMember ? 'Yes' : 'No'}</p>
+      <p style={{ fontWeight: 'bold', textAlign : 'right', marginTop : '-350px', padding: '5px'}}>Coat of Arms</p>
+        <div style={{ padding: '20px', marginLeft: '520px', marginTop: '0px', fontWeight : 'bold', fontSize : '17px'}}>
+        <p> Name:{' '}<span style={{ color: 'darkblue', textDecoration: 'underline' }}> {backendData.name?.common || 'NULL'}</span></p> 
+        <p> Official name:{' '}<span style={{ color: 'darkblue', textDecoration: 'underline' }}> {backendData.name?.official || 'NULL'}</span></p>
+        <p> Capital:{' '}<span style={{ color: 'darkblue', textDecoration: 'underline' }}> {backendData.capital || 'NULL'}</span></p>
+        <p> Region:{' '}<span style={{ color: 'darkblue', textDecoration: 'underline' }}> {backendData.region || 'NULL'}</span></p>
+        <p> Subregion:{' '}<span style={{ color: 'darkblue', textDecoration: 'underline' }}> {backendData.subregion || 'NULL'}</span></p>
+        <p> Continents:{' '}<span style={{ color: 'darkblue', textDecoration: 'underline' }}> {Object.values(backendData.continents).join(', ') || 'NULL'}</span></p>
+        <p> Languages:{' '}<span style={{ color: 'darkblue', textDecoration: 'underline' }}> {Object.values(backendData.languages).join(', ') || 'NULL'}</span></p>
+        <p> Area:{' '}<span style={{ color: 'darkblue', textDecoration: 'underline' }}> {backendData.area || 'NULL'}m</span></p>
+        <p> Population:{' '}<span style={{ color: 'darkblue', textDecoration: 'underline' }}> {backendData.population || 'NULL'}</span></p>
+        <p> Latitude and Longitude:{' '}<span style={{ color: 'darkblue', textDecoration: 'underline' }}> ({backendData.latlng?.[0] || 'NULL'}, {backendData.latlng?.[1] || 'NULL'})</span></p>
+        <p> Borders:{' '}<span style={{ color: 'darkblue', textDecoration: 'underline' }}> {backendData.borders?.join(' , ') || 'NULL'}</span></p>
+        <p> Timezones:{' '}<span style={{ color: 'darkblue', textDecoration: 'underline' }}> {Object.values(backendData.timezones).join(', ') || 'NULL'}</span></p>
+        <p> Currencies:{' '}<span style={{ color: 'darkblue', textDecoration: 'underline' }}> {Object.keys(backendData.currencies).join(', ') || 'NULL'}</span></p>
+        <p> Alternate Spellings:{' '}<span style={{ color: 'darkblue', textDecoration: 'underline' }}> {backendData.altSpellings?.join(' , ') || 'NULL'}</span></p>
+        <p> tld:{' '}<span style={{ color: 'darkblue', textDecoration: 'underline' }}> {backendData.tld || 'NULL'}</span></p>
+        <p> Status:{' '}<span style={{ color: 'darkblue', textDecoration: 'underline' }}> {backendData.status || 'NULL'}</span></p>
+        <p> Independent?{' '}<span style={{ color: 'darkblue', textDecoration: 'underline' }}> {backendData.independent ? 'Yes' : 'No' || 'NULL'}</span></p>
+        <p> Landlocked?{' '}<span style={{ color: 'darkblue', textDecoration: 'underline' }}>{backendData.landlocked ? 'Yes' : 'No' || 'NULL'}</span></p>
+        {/* <p> UN Member? {backendData.unMember ? 'Yes' : 'No'}</p> */}
+        <p>UN Member?{' '}<span style={{ color: 'darkblue', textDecoration: 'underline' }}>{backendData.unMember ? 'Yes' : 'No'}</span></p>
         <a href={backendData.maps.googleMaps} target="_blank" rel="noopener noreferrer" style={linkStyle}>View on Google Maps</a>
         </div>
       </div>
